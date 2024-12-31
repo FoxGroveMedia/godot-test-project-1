@@ -26,7 +26,7 @@ func load_new_level(
 		level_path : String,
 		_target_transition : String,
 		_position_offset : Vector2,
-		auto_save : bool = true
+		auto_save : bool = false
 ) -> void:
 	
 	get_tree().paused = true
@@ -42,8 +42,6 @@ func load_new_level(
 	get_tree().change_scene_to_file( level_path )
 	
 	await SceneTransition.fade_in()
-	
-	print("Is Auto Save Enabled: ", auto_save)
 	
 	if auto_save == true:
 		SaveManager.save_game()

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://jc1w24tfcmmn"]
+
+[ext_resource type="Script" path="res://GUI/loading_screen/loading_screen.gd" id="1_xhrnm"]
+[ext_resource type="PackedScene" uid="uid://smllkcqmwf7e" path="res://GUI/loading_screen/loading_screen_ui.tscn" id="2_q1wl4"]
+
+[node name="LoadingScreen" type="Node2D"]
+script = ExtResource("1_xhrnm")
+
+[node name="LoadingScreenUI" parent="." instance=ExtResource("2_q1wl4")]
+layer = 3

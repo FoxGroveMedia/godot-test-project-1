@@ -23,8 +23,8 @@ var current_save : Dictionary = {
 
 
 # Lets start this party!
-func _ready() -> void:
-	pass
+#func _ready() -> void:
+	#pass
 
 
 # Save the game.
@@ -42,26 +42,30 @@ func save_game() -> void:
 
 # Load the saved game.
 func load_game() -> void:
-	
-	var file := FileAccess.open( SAVE_PATH, FileAccess.READ )
-	var json := JSON.new()
-	json.parse( file.get_line() )
-	var save_dict := json.get_data() as Dictionary
-	current_save = save_dict
-	
-	LevelManager.load_new_level( current_save.scene_path, "", Vector2.ZERO )
-	
-	await LevelManager.level_load_started
-	
-	PlayerManager.set_player_position( Vector2(current_save.player.pos_x, current_save.player.pos_y ) )
-	PlayerManager.set_health( current_save.player.hp, current_save.player.max_hp )
-	PlayerManager.INVENTORY_DATA.parse_save_data( current_save.inventory )
-	
-	await LevelManager.level_loaded
-	
-	game_loaded.emit()
-	print("Game Loaded!")
-	
+	if FileAccess.file_exists( SAVE_PATH ):
+		print("Loading game...")
+		var file := FileAccess.open( SAVE_PATH, FileAccess.READ )
+		var json := JSON.new()
+		json.parse( file.get_line() )
+		var save_dict := json.get_data() as Dictionary
+		current_save = save_dict
+		
+		LevelManager.load_new_level( current_save.scene_path, "", Vector2.ZERO )
+		
+		await LevelManager.level_load_started
+		
+		PlayerManager.set_player_position( Vector2(current_save.player.pos_x, current_save.player.pos_y ) )
+		PlayerManager.set_health( current_save.player.hp, current_save.player.max_hp )
+		PlayerManager.INVENTORY_DATA.parse_save_data( current_save.inventory )
+		
+		await LevelManager.level_loaded
+		
+		game_loaded.emit()
+		print("Game Loaded!")
+	else:
+		#get_tree().change_scene_to_file("res://Levels/Area01/01.tscn")
+		LevelManager.load_new_level("res://Levels/Area01/01.tscn", "", Vector2.ZERO)
+		PlayerManager.set_player_position( Vector2(200, 170) )
 	pass
 
 
