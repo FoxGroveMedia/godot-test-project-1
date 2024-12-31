@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1oswx777ek5y"]
+
+[ext_resource type="Script" path="res://GeneralNodes/ItemDropper/item_dropper.gd" id="1_bdos3"]
+[ext_resource type="FontVariation" uid="uid://b7t5rxjscm1gs" path="res://Fonts/tiny_unicode.tres" id="2_7qsmq"]
+[ext_resource type="PackedScene" uid="uid://ox2g2yn4q0yr" path="res://GeneralNodes/PersistentDataHandler/persistent_data_handler.tscn" id="2_lyqhl"]
+[ext_resource type="AudioStream" uid="uid://fs1ux3hgdkko" path="res://GeneralNodes/ItemDropper/dungeon_discovery.wav" id="3_1q3kq"]
+
+[node name="ItemDropper" type="Node2D"]
+script = ExtResource("1_bdos3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -33.0
+offset_top = -33.0
+offset_right = 33.0
+offset_bottom = -16.0
+theme_override_colors/font_color = Color(0.982906, 0.0857688, 0.0553703, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_7qsmq")
+theme_override_font_sizes/font_size = 16
+text = "ITEM DROPPER"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1q3kq")
+
+[node name="PersistentDataHandler" parent="." instance=ExtResource("2_lyqhl")]

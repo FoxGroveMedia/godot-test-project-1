@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://bsshla2p71lgb"]
+[gd_scene load_steps=10 format=4 uid="uid://bsshla2p71lgb"]
 
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_07wvh"]
 [ext_resource type="PackedScene" uid="uid://dwd3h2y61mpam" path="res://Tile Maps/dungeon_01.tscn" id="2_edumg"]
 [ext_resource type="PackedScene" uid="uid://br1nkygxftj1o" path="res://Levels/level_transition.tscn" id="3_fg2ke"]
 [ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://Levels/player_spawn.tscn" id="5_i7e4f"]
+[ext_resource type="PackedScene" uid="uid://3pji7bay7dn1" path="res://GeneralNodes/EnemyCounter/enemy_counter.tscn" id="6_entpr"]
+[ext_resource type="PackedScene" uid="uid://che2yv72dk2or" path="res://Enemies/Slime/Slime.tscn" id="7_p1p06"]
+[ext_resource type="PackedScene" uid="uid://d1oswx777ek5y" path="res://GeneralNodes/ItemDropper/ItemDropper.tscn" id="8_3ot07"]
+[ext_resource type="Resource" uid="uid://dyx6afhv6d003" path="res://Items/key_dungeon.tres" id="9_emgju"]
 [ext_resource type="AudioStream" uid="uid://cf5jseuw85nm7" path="res://Music/battle-of-the-dragons.mp3" id="10_s8v3x"]
 
 [node name="03" type="Node2D"]
@@ -24,3 +28,26 @@ position = Vector2(96, 302)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_s8v3x")
 autoplay = true
+
+[node name="EnemyCounter" parent="." instance=ExtResource("6_entpr")]
+
+[node name="Slime" parent="EnemyCounter" instance=ExtResource("7_p1p06")]
+position = Vector2(78, 198)
+
+[node name="Slime2" parent="EnemyCounter" instance=ExtResource("7_p1p06")]
+position = Vector2(146, 121)
+
+[node name="Slime3" parent="EnemyCounter" instance=ExtResource("7_p1p06")]
+position = Vector2(-5, 119)
+
+[node name="Slime4" parent="EnemyCounter" instance=ExtResource("7_p1p06")]
+position = Vector2(-2, 275)
+
+[node name="Slime5" parent="EnemyCounter" instance=ExtResource("7_p1p06")]
+position = Vector2(158, 276)
+
+[node name="ItemDropper" parent="." instance=ExtResource("8_3ot07")]
+position = Vector2(113, 192)
+item_data = ExtResource("9_emgju")
+
+[connection signal="enemies_defated" from="EnemyCounter" to="ItemDropper" method="drop_item"]
