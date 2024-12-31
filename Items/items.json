@@ -1,0 +1,28 @@
+[
+	{
+		"id": 1,
+		"title": "Gem",
+		"description": "A valuable gem!",
+		"drop_rate": 0.1,
+		"categories": ["gems"],
+		"resource_path": "res://Items/gem.tres"
+	},
+	{
+		"id": 2,
+		"title": "Red Apple",
+		"description": "A delicious red apple!",
+		"drop_rate": 1.0,
+		"categories": ["food"],
+		"resource_path": "res://Items/apple.tres"
+	},
+	{
+		"id": 3,
+		"title": "Potion of Healing",
+		"description": "This red drink restores your health!",
+		"min_level": 1,
+		"max_level": 10,
+		"drop_rate": 0.25,
+		"categories": ["potion","health"],
+		"resource_path": "res://Items/potion.tres"
+	},
+]

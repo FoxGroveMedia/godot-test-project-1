@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://nh08ehongn3y"]
+
+[ext_resource type="Texture2D" uid="uid://bxutk04xk4xqr" path="res://Props/Barrels/barrels.png" id="1_cdotl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cec1j"]
+radius = 3.0
+height = 20.0
+
+[node name="Barrel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cdotl")
+region_enabled = true
+region_rect = Rect2(1, 9, 30, 40)
+
+[node name="RigidBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cec1j")
