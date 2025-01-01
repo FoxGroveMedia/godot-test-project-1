@@ -63,10 +63,13 @@ func load_game() -> void:
 		game_loaded.emit()
 		print("Game Loaded!")
 	else:
-		#get_tree().change_scene_to_file("res://Levels/Area01/01.tscn")
-		LevelManager.load_new_level("res://Levels/Area01/01.tscn", "", Vector2.ZERO)
-		PlayerManager.set_player_position( Vector2(200, 170) )
-	pass
+		LevelManager.load_new_level( "res://Levels/Area01/01.tscn", "", Vector2.ZERO )
+		await LevelManager.level_load_started
+		await LevelManager.level_loaded
+		PlayerManager.set_player_position( LevelManager.get_player_spawn_position() )
+		
+		game_loaded.emit()
+		print("Game Loaded!")
 
 
 # Update the player from the saved data.

@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://jc1w24tfcmmn"]
+[gd_scene load_steps=5 format=3 uid="uid://jc1w24tfcmmn"]
 
 [ext_resource type="Script" path="res://GUI/loading_screen/loading_screen.gd" id="1_xhrnm"]
 [ext_resource type="PackedScene" uid="uid://smllkcqmwf7e" path="res://GUI/loading_screen/loading_screen_ui.tscn" id="2_q1wl4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igd2w"]
+bg_color = Color(0, 0, 0, 0.785)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggib8"]
+bg_color = Color(0.377927, 0.696263, 0, 1)
 
 [node name="LoadingScreen" type="Node2D"]
 script = ExtResource("1_xhrnm")
 
 [node name="LoadingScreenUI" parent="." instance=ExtResource("2_q1wl4")]
 layer = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="LoadingScreenUI"]
+offset_left = 180.0
+offset_top = 164.0
+offset_right = 299.0
+offset_bottom = 191.0
+theme_override_styles/background = SubResource("StyleBoxFlat_igd2w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ggib8")

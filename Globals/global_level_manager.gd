@@ -15,6 +15,15 @@ func _ready() -> void:
 	level_loaded.emit()
 
 
+# Get the player spawn position.
+func get_player_spawn_position() -> Vector2:
+	for child in get_parent().get_children():
+		for grandchild in child.get_children():
+			if grandchild.name == "PlayerSpawn":
+				return grandchild.global_position
+	return Vector2( 16, 16 )
+
+
 # Change titlemap bounds
 func change_titlemap_bounds( bounds : Array[ Vector2 ] ) -> void:
 	current_tilemap_bounds = bounds
