@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://r3jpbn1ultlb" path="res://npc/npc.tscn" id="7_w05wm"]
 [ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://Levels/player_spawn.tscn" id="8_2kese"]
 [ext_resource type="Resource" uid="uid://b7vibcmw2l133" path="res://npc/npcs/npc_01.tres" id="8_7vhh2"]
-[ext_resource type="PackedScene" uid="uid://guevek6ijc3x" path="res://npc/npc_behavior_wonder.tscn" id="8_seavy"]
+[ext_resource type="PackedScene" uid="uid://guevek6ijc3x" path="res://npc/npc_behavior_wander.tscn" id="8_seavy"]
 
 [node name="Playground" type="Node2D"]
 y_sort_enabled = true
@@ -91,7 +91,5 @@ item_data = ExtResource("6_7vrla")
 position = Vector2(145, 154)
 npc_resource = ExtResource("8_7vhh2")
 
-[node name="NpcWonderBehavior" parent="NPC" instance=ExtResource("8_seavy")]
-wonder_range = 4
-wonder_duration = 2.0
+[node name="NpcWanderBehavior" parent="NPC" instance=ExtResource("8_seavy")]
 idle_duration = 4.0
