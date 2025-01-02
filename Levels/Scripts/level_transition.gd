@@ -30,9 +30,12 @@ func _ready() -> void:
 		return
 	
 	monitoring = false
+
 	_place_player()
 	
 	await LevelManager.level_loaded
+	await get_tree().physics_frame
+	await get_tree().physics_frame
 	
 	monitoring = true
 	body_entered.connect( _player_entered )
