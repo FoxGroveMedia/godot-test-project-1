@@ -39,7 +39,6 @@ position = Vector2(80, 96)
 
 [node name="BarredDoor" parent="." instance=ExtResource("6_7p66w")]
 process_mode = 3
-visible = false
 position = Vector2(160, 22)
 
 [node name="PushableStatue" parent="." instance=ExtResource("7_vfd3q")]

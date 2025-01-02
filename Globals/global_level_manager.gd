@@ -58,6 +58,7 @@ func load_new_level(
 	get_tree().paused = false
 	
 	await get_tree().process_frame
+	#await get_tree().process_frame
 	
 	level_loaded.emit()
 	

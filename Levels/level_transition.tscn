@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qloh0"]
 resource_local_to_scene = true
-size = Vector2(128, 32)
+size = Vector2(32, 64)
 
 [node name="LevelTransition" type="Area2D"]
 collision_layer = 0
@@ -12,5 +12,6 @@ monitorable = false
 script = ExtResource("1_5tcci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 0)
 shape = SubResource("RectangleShape2D_qloh0")
 debug_color = Color(0.713726, 0.00392157, 0.984314, 0.658824)
