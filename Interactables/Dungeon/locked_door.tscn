@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://rb2yl8tlhbdi"]
 
-[ext_resource type="Script" path="res://Interactables/Dungeon/Scripts/locked_door.gd" id="1_5dj21"]
-[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://Interactables/Dungeon/Sprites/dungeon_props.png" id="1_nbrps"]
-[ext_resource type="PackedScene" uid="uid://ox2g2yn4q0yr" path="res://GeneralNodes/PersistentDataHandler/persistent_data_handler.tscn" id="2_7mth4"]
-[ext_resource type="Resource" uid="uid://dyx6afhv6d003" path="res://Items/key_dungeon.tres" id="2_xfue4"]
-[ext_resource type="AudioStream" uid="uid://m16glw3lbuga" path="res://Interactables/Dungeon/Audio/locked_door.wav" id="3_gcdob"]
-[ext_resource type="AudioStream" uid="uid://qsyhpppimo67" path="res://Interactables/Dungeon/Audio/unlock_door.wav" id="4_65jkq"]
+[ext_resource type="Script" path="res://interactables/dungeon/scripts/locked_door.gd" id="1_5dj21"]
+[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://interactables/dungeon/sprites/dungeon_props.png" id="1_nbrps"]
+[ext_resource type="PackedScene" uid="uid://ox2g2yn4q0yr" path="res://general_nodes/persistent_data_handler/persistent_data_handler.tscn" id="2_7mth4"]
+[ext_resource type="Resource" uid="uid://dyx6afhv6d003" path="res://items/key_dungeon.tres" id="2_xfue4"]
+[ext_resource type="AudioStream" uid="uid://m16glw3lbuga" path="res://interactables/dungeon/audio/locked_door.wav" id="3_gcdob"]
+[ext_resource type="AudioStream" uid="uid://qsyhpppimo67" path="res://interactables/dungeon/audio/unlock_door.wav" id="4_65jkq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7o2wy"]
 size = Vector2(64, 60)

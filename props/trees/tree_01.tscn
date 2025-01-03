@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4xtqhrqnagrl"]
+
+[ext_resource type="Texture2D" uid="uid://bxqr8j8tymf32" path="res://props/trees/tree_01.png" id="1_gy8tw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wsf6f"]
+load_path = "res://.godot/imported/tree01.png-677e81d5e5d6ba72dee73a2b89a2e379.ctex"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mc1gv"]
+radius = 6.0
+height = 36.0
+
+[node name="Tree01" type="Node2D"]
+y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
+
+[node name="Trunk" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.941176)
+position = Vector2(0, 54)
+texture = ExtResource("1_gy8tw")
+region_enabled = true
+region_rect = Rect2(128, 0, 128, 64)
+
+[node name="Leaves" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.705882)
+z_index = 2
+texture = SubResource("CompressedTexture2D_wsf6f")
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 128)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+position = Vector2(0, 57)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mc1gv")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cc5df1cdm55nr"]
 
-[ext_resource type="Script" path="res://Interactables/Dungeon/Scripts/pressure_plate.gd" id="1_4af2c"]
-[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://Interactables/Dungeon/Sprites/dungeon_props.png" id="2_7gyxa"]
+[ext_resource type="Script" path="res://interactables/dungeon/scripts/pressure_plate.gd" id="1_4af2c"]
+[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://interactables/dungeon/sprites/dungeon_props.png" id="2_7gyxa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsg05"]
 size = Vector2(8, 8)

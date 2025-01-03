@@ -1,6 +1,0 @@
-[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://yaeaqk4wmffb"]
-
-[ext_resource type="FontFile" uid="uid://bdrkanw2wd5of" path="res://Fonts/in_your_face_joffrey.ttf" id="1_ggk5p"]
-
-[resource]
-base_font = ExtResource("1_ggk5p")

@@ -1,14 +1,16 @@
-[gd_scene load_steps=10 format=4 uid="uid://b6s6vl3tlqi8i"]
+[gd_scene load_steps=12 format=4 uid="uid://b6s6vl3tlqi8i"]
 
-[ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_y28d5"]
-[ext_resource type="PackedScene" uid="uid://cxu2adw6gyflv" path="res://Tile Maps/grass_01.tscn" id="2_vjdl2"]
-[ext_resource type="PackedScene" uid="uid://dulplqqlpy5mr" path="res://Props/Plants/plant.tscn" id="4_5eoaa"]
-[ext_resource type="PackedScene" uid="uid://hs4k6icqn77d" path="res://Items/item_pickup/item_pickup.tscn" id="5_63lg3"]
-[ext_resource type="Resource" uid="uid://306bl0drx71q" path="res://Items/apple.tres" id="6_7vrla"]
+[ext_resource type="Script" path="res://levels/scripts/level.gd" id="1_y28d5"]
+[ext_resource type="PackedScene" uid="uid://cxu2adw6gyflv" path="res://tilemaps/grass_01.tscn" id="2_vjdl2"]
+[ext_resource type="PackedScene" uid="uid://dulplqqlpy5mr" path="res://props/plants/plant_01.tscn" id="4_5eoaa"]
+[ext_resource type="PackedScene" uid="uid://hs4k6icqn77d" path="res://items/item_pickup/item_pickup.tscn" id="5_63lg3"]
+[ext_resource type="Resource" uid="uid://306bl0drx71q" path="res://items/apple.tres" id="6_7vrla"]
 [ext_resource type="PackedScene" uid="uid://r3jpbn1ultlb" path="res://npc/npc.tscn" id="7_w05wm"]
-[ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://Levels/player_spawn.tscn" id="8_2kese"]
+[ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://levels/player_spawn.tscn" id="8_2kese"]
 [ext_resource type="Resource" uid="uid://b7vibcmw2l133" path="res://npc/npcs/npc_01.tres" id="8_7vhh2"]
 [ext_resource type="PackedScene" uid="uid://guevek6ijc3x" path="res://npc/npc_behavior_wander.tscn" id="8_seavy"]
+[ext_resource type="PackedScene" uid="uid://pnmg64xy3yjj" path="res://npc/npc_behavior_patrol.tscn" id="10_vbvn6"]
+[ext_resource type="PackedScene" uid="uid://dnx4l7qxjonv3" path="res://npc/patrol_location.tscn" id="11_p8nwm"]
 
 [node name="Playground" type="Node2D"]
 y_sort_enabled = true
@@ -93,3 +95,21 @@ npc_resource = ExtResource("8_7vhh2")
 
 [node name="NpcWanderBehavior" parent="NPC" instance=ExtResource("8_seavy")]
 idle_duration = 4.0
+
+[node name="NPC2" parent="." instance=ExtResource("7_w05wm")]
+position = Vector2(383, 144)
+
+[node name="NpcPatrolBehavior" parent="NPC2" instance=ExtResource("10_vbvn6")]
+
+[node name="PatrolLocation" parent="NPC2/NpcPatrolBehavior" instance=ExtResource("11_p8nwm")]
+modulate = Color(1, 0, 0, 1)
+
+[node name="PatrolLocation2" parent="NPC2/NpcPatrolBehavior" instance=ExtResource("11_p8nwm")]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(0, 64)
+wait_time = 2.0
+
+[node name="PatrolLocation3" parent="NPC2/NpcPatrolBehavior" instance=ExtResource("11_p8nwm")]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(68, 29)
+wait_time = 2.0

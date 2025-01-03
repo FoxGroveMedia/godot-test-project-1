@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://smllkcqmwf7e"]
 
-[ext_resource type="FontVariation" uid="uid://vv0o71hogfa" path="res://Fonts/venice_classic.tres" id="2_ausvq"]
-[ext_resource type="Texture2D" uid="uid://flm7eg7uspjp" path="res://GUI/loading_screen/loading_screen_background.jpg" id="2_lsoj8"]
+[ext_resource type="FontVariation" uid="uid://vv0o71hogfa" path="res://gui/fonts/venice_classic.tres" id="2_ausvq"]
+[ext_resource type="Texture2D" uid="uid://flm7eg7uspjp" path="res://gui/loading_screen/loading_screen_background.jpg" id="2_lsoj8"]
 
 [sub_resource type="Animation" id="Animation_bpfde"]
 length = 0.001

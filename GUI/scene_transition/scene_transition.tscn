@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bedw30l3v4rka"]
 
-[ext_resource type="Script" path="res://GUI/scene_transition/scene_transition.gd" id="1_o1c0i"]
+[ext_resource type="Script" path="res://gui/scene_transition/scene_transition.gd" id="1_o1c0i"]
 
 [sub_resource type="Animation" id="Animation_yo515"]
 resource_name = "default"

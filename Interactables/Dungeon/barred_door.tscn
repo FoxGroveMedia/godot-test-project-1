@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://mye74nyxwesw"]
 
-[ext_resource type="Script" path="res://Interactables/Dungeon/Scripts/barred_door.gd" id="1_wwpcm"]
-[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://Interactables/Dungeon/Sprites/dungeon_props.png" id="2_fac2t"]
-[ext_resource type="AudioStream" uid="uid://b0lku8dusafb7" path="res://Interactables/Dungeon/Audio/bars_open.wav" id="3_g5f73"]
-[ext_resource type="PackedScene" uid="uid://ox2g2yn4q0yr" path="res://GeneralNodes/PersistentDataHandler/persistent_data_handler.tscn" id="4_53ipc"]
+[ext_resource type="Script" path="res://interactables/dungeon/scripts/barred_door.gd" id="1_wwpcm"]
+[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://interactables/dungeon/sprites/dungeon_props.png" id="2_fac2t"]
+[ext_resource type="AudioStream" uid="uid://b0lku8dusafb7" path="res://interactables/dungeon/audio/bars_open.wav" id="3_g5f73"]
+[ext_resource type="PackedScene" uid="uid://ox2g2yn4q0yr" path="res://general_nodes/persistent_data_handler/persistent_data_handler.tscn" id="4_53ipc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hb86g"]
 size = Vector2(64, 62.5)

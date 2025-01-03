@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://wkv8daim1hm4"]
 
-[ext_resource type="Texture2D" uid="uid://ctnhpgpy6yh38" path="res://Props/Torch/torch.png" id="1_aaj6w"]
+[ext_resource type="Texture2D" uid="uid://ctnhpgpy6yh38" path="res://props/torch/torch.png" id="1_aaj6w"]
 
 [sub_resource type="Animation" id="Animation_bir3b"]
 resource_name = "default"

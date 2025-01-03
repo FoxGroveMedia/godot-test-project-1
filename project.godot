@@ -11,20 +11,20 @@ config_version=5
 [application]
 
 config/name="Test Project 1"
-run/main_scene="res://GUI/loading_screen/loading_screen.tscn"
+run/main_scene="res://gui/loading_screen/loading_screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-AudioManager="*res://Globals/global_audio_manager.gd"
-LevelManager="*res://Globals/global_level_manager.gd"
-ItemManager="*res://Globals/global_item_manager.gd"
-PlayerHud="*res://GUI/player_hud/player_hud.tscn"
-PlayerManager="*res://Globals/global_player_manager.gd"
-SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
-SaveManager="*res://Globals/global_save_manager.gd"
-PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
+AudioManager="*res://globals/global_audio_manager.gd"
+LevelManager="*res://globals/global_level_manager.gd"
+ItemManager="*res://globals/global_item_manager.gd"
+PlayerHud="*res://gui/player_hud/player_hud.tscn"
+PlayerManager="*res://globals/global_player_manager.gd"
+SceneTransition="*res://gui/scene_transition/scene_transition.tscn"
+SaveManager="*res://globals/global_save_manager.gd"
+PauseMenu="*res://gui/pause_menu/pause_menu.tscn"
 
 [display]
 

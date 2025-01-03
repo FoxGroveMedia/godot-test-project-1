@@ -1,6 +1,0 @@
-[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://vv0o71hogfa"]
-
-[ext_resource type="FontFile" uid="uid://4j1ihqec6d8c" path="res://Fonts/venice_classic.ttf" id="1_qh7kr"]
-
-[resource]
-base_font = ExtResource("1_qh7kr")

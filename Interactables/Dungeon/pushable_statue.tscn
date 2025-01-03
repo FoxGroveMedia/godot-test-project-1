@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhion7fodtflr"]
 
-[ext_resource type="Script" path="res://Interactables/Dungeon/Scripts/pushable_statue.gd" id="1_ljhea"]
-[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://Interactables/Dungeon/Sprites/dungeon_props.png" id="2_kmc4x"]
-[ext_resource type="AudioStream" uid="uid://dve4qp4eddhp6" path="res://Interactables/Dungeon/Audio/push_stone.wav" id="2_tdg3f"]
-[ext_resource type="PackedScene" uid="uid://ox2g2yn4q0yr" path="res://GeneralNodes/PersistentDataHandler/persistent_data_handler.tscn" id="4_ibjk1"]
+[ext_resource type="Script" path="res://interactables/dungeon/scripts/pushable_statue.gd" id="1_ljhea"]
+[ext_resource type="Texture2D" uid="uid://yt02cgu2elvt" path="res://interactables/dungeon/sprites/dungeon_props.png" id="2_kmc4x"]
+[ext_resource type="AudioStream" uid="uid://dve4qp4eddhp6" path="res://interactables/dungeon/audio/push_stone.wav" id="2_tdg3f"]
+[ext_resource type="PackedScene" uid="uid://ox2g2yn4q0yr" path="res://general_nodes/persistent_data_handler/persistent_data_handler.tscn" id="4_ibjk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76u8l"]
 size = Vector2(24, 25)
