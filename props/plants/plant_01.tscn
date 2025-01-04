@@ -22,7 +22,6 @@ hframes = 16
 vframes = 3
 
 [node name="HitBox" parent="." instance=ExtResource("3_0co23")]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -7)

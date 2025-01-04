@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://r3jpbn1ultlb"]
+[gd_scene load_steps=13 format=3 uid="uid://clopabhbmb55m"]
 
 [ext_resource type="Script" path="res://npc/scripts/npc.gd" id="1_07l2n"]
 [ext_resource type="Texture2D" uid="uid://3oqn82fjm45f" path="res://npc/sprites/npc_sprite_02.png" id="2_sxuue"]

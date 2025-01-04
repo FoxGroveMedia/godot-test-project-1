@@ -50,7 +50,7 @@ func gather_patrol_locations( _n : Node = null ) -> void:
 				if not _p.transform_changed.is_connected( gather_patrol_locations ):
 					_p.transform_changed.connect( gather_patrol_locations )
 				
-				_p.update_label( str(i) )
+				_p.update_label( str(i+1) )
 				_p.modulate = _get_color_by_index( i )
 				
 				var _next : PatrolLocation

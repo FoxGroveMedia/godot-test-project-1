@@ -1,0 +1,174 @@
+[gd_scene load_steps=14 format=3 uid="uid://drk8yty8kp0tu"]
+
+[ext_resource type="Script" path="res://gui/dialog_system/scripts/dialog_system.gd" id="1_jjypc"]
+[ext_resource type="Texture2D" uid="uid://jqnfov3w48on" path="res://gui/dialog_system/sprites/text_bubble.png" id="2_4f8he"]
+[ext_resource type="FontFile" uid="uid://bg4337h6rk0jx" path="res://gui/fonts/abaddon_light.ttf" id="3_jmtna"]
+[ext_resource type="FontFile" uid="uid://btufsggp7jn4f" path="res://gui/fonts/abaddon_bold.ttf" id="4_11taw"]
+[ext_resource type="Texture2D" uid="uid://dhmt6dj3ugxcu" path="res://npc/sprites/portraits/npc_portrait_01.png" id="5_yauja"]
+[ext_resource type="FontFile" uid="uid://hauaebcjpw43" path="res://gui/fonts/tiny_unicode.ttf" id="6_p7xuk"]
+
+[sub_resource type="Gradient" id="Gradient_fl5gq"]
+offsets = PackedFloat32Array(0.258993, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iworm"]
+gradient = SubResource("Gradient_fl5gq")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jcy34"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+texture = ExtResource("2_4f8he")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_en2bp"]
+content_margin_left = 1.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 2.0
+bg_color = Color(0.179476, 0.48397, 0.0753334, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="Animation" id="Animation_h7xai"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.179476, 0.48397, 0.0753334, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kny1g"]
+resource_name = "default"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.196078, 0.337255, 0, 1), Color(0.338211, 0.553043, 7.70092e-07, 1), Color(0.19798, 0.336196, 4.81308e-08, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g0mqn"]
+_data = {
+"RESET": SubResource("Animation_h7xai"),
+"default": SubResource("Animation_kny1g")
+}
+
+[node name="DialogSystem" type="CanvasLayer"]
+process_mode = 3
+layer = 0
+script = ExtResource("1_jjypc")
+
+[node name="DialogUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="DialogUI"]
+modulate = Color(0, 0, 0, 0.796078)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_iworm")
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -378.0
+offset_top = -86.0
+offset_right = -11.0
+offset_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_jcy34")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogUI/PanelContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.439216, 0.396078, 0.321569, 1)
+theme_override_fonts/normal_font = ExtResource("3_jmtna")
+theme_override_fonts/bold_font = ExtResource("4_11taw")
+bbcode_enabled = true
+text = "Example [b][color=orangered]bold[/color][/b] text.
+[wave]wavy text[/wave]
+[shake]shaky text[/shake]"
+
+[node name="NameLabel" type="Label" parent="DialogUI"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 161.0
+offset_right = 181.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0.894118, 0.862745, 0.796078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("4_11taw")
+text = "NAME"
+vertical_alignment = 2
+
+[node name="PortraitSprite" type="Sprite2D" parent="DialogUI"]
+position = Vector2(50, 195)
+texture = ExtResource("5_yauja")
+hframes = 4
+
+[node name="Timer" type="Timer" parent="DialogUI"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialogUI"]
+
+[node name="DialogProgressIndicator" type="PanelContainer" parent="DialogUI"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 242.0
+offset_right = 473.0
+offset_bottom = 262.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_en2bp")
+
+[node name="Label" type="Label" parent="DialogUI/DialogProgressIndicator"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0.153435, 0.270635, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("6_p7xuk")
+text = "NEXT"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogProgressIndicator"]
+libraries = {
+"": SubResource("AnimationLibrary_g0mqn")
+}
+autoplay = "default"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqiyr5eudt5pt"
-path="res://.godot/imported/question_bubble.svg-430dfa331d8cc3d3ffc9263c44f2704d.ctex"
+uid="uid://re8i2yu22t28"
+path="res://.godot/imported/dialog_interactable.png-178ac5995eb35b4f9d11102e3ef74088.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://npc/icons/question_bubble.svg"
-dest_files=["res://.godot/imported/question_bubble.svg-430dfa331d8cc3d3ffc9263c44f2704d.ctex"]
+source_file="res://interactables/dialog/sprites/dialog_interactable.png"
+dest_files=["res://.godot/imported/dialog_interactable.png-178ac5995eb35b4f9d11102e3ef74088.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
