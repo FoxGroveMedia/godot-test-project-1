@@ -2,8 +2,8 @@ extends Node
 
 signal interact_pressed
 
-const PLAYER = preload("res://Player/player.tscn")
-const INVENTORY_DATA : InventoryData = preload("res://GUI/pause_menu/inventory/player_inventory.tres")
+const PLAYER = preload("res://player/player.tscn")
+const INVENTORY_DATA : InventoryData = preload("res://gui/pause_menu/inventory/player_inventory.tres")
 
 var interact_handled : bool = true
 var player : Player

@@ -1,7 +1,7 @@
 extends Node
 
 var rng = RandomNumberGenerator.new()
-var items : Array = JSON.parse_string(FileAccess.get_file_as_string("res://Items/items.json"))
+var items : Array = JSON.parse_string(FileAccess.get_file_as_string("res://items/items.json"))
 
 
 # I would still like to add in functionality, for filtering items by their min_level/max_level values.

@@ -1,7 +1,7 @@
 @tool
 class_name ItemDropper extends Node2D
 
-const PICKUP = preload("res://Items/item_pickup/item_pickup.tscn")
+const PICKUP = preload("res://items/item_pickup/item_pickup.tscn")
 
 @onready var sprite: Sprite2D = $Sprite2D
 

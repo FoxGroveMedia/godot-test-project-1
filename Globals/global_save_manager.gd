@@ -63,7 +63,7 @@ func load_game() -> void:
 		game_loaded.emit()
 		print("Game Loaded!")
 	else:
-		LevelManager.load_new_level( "res://Levels/Area01/01.tscn", "", Vector2.ZERO )
+		LevelManager.load_new_level( "res://levels/area_01/01.tscn", "", Vector2.ZERO )
 		await LevelManager.level_load_started
 		await LevelManager.level_loaded
 		PlayerManager.set_player_position( LevelManager.get_player_spawn_position() )
