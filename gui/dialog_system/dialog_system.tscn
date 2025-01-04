@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://drk8yty8kp0tu"]
+[gd_scene load_steps=16 format=3 uid="uid://drk8yty8kp0tu"]
 
 [ext_resource type="Script" path="res://gui/dialog_system/scripts/dialog_system.gd" id="1_jjypc"]
 [ext_resource type="Texture2D" uid="uid://jqnfov3w48on" path="res://gui/dialog_system/sprites/text_bubble.png" id="2_4f8he"]
 [ext_resource type="FontFile" uid="uid://bg4337h6rk0jx" path="res://gui/fonts/abaddon_light.ttf" id="3_jmtna"]
 [ext_resource type="FontFile" uid="uid://btufsggp7jn4f" path="res://gui/fonts/abaddon_bold.ttf" id="4_11taw"]
 [ext_resource type="Texture2D" uid="uid://dhmt6dj3ugxcu" path="res://npc/sprites/portraits/npc_portrait_01.png" id="5_yauja"]
+[ext_resource type="AudioStream" uid="uid://5sourf2eib3l" path="res://gui/dialog_system/audio/voice_blip.wav" id="6_bk1ml"]
+[ext_resource type="Script" path="res://gui/dialog_system/scripts/dialog_portrait.gd" id="6_gaj1x"]
 [ext_resource type="FontFile" uid="uid://hauaebcjpw43" path="res://gui/fonts/tiny_unicode.ttf" id="6_p7xuk"]
 
 [sub_resource type="Gradient" id="Gradient_fl5gq"]
@@ -144,10 +146,15 @@ vertical_alignment = 2
 position = Vector2(50, 195)
 texture = ExtResource("5_yauja")
 hframes = 4
+script = ExtResource("6_gaj1x")
 
 [node name="Timer" type="Timer" parent="DialogUI"]
+one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialogUI"]
+stream = ExtResource("6_bk1ml")
+max_polyphony = 6
+bus = &"SFX"
 
 [node name="DialogProgressIndicator" type="PanelContainer" parent="DialogUI"]
 layout_mode = 0
