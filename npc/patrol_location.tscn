@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnx4l7qxjonv3"]
+[gd_scene load_steps=5 format=3 uid="uid://cj2g7ly7csfox"]
 
-[ext_resource type="FontVariation" uid="uid://b7t5rxjscm1gs" path="res://gui/fonts/tiny_unicode.tres" id="1_dcfb8"]
 [ext_resource type="Script" path="res://npc/scripts/patrol_location.gd" id="1_dpj7a"]
+[ext_resource type="FontFile" uid="uid://hauaebcjpw43" path="res://gui/fonts/tiny_unicode.ttf" id="2_ffwg7"]
 
 [sub_resource type="Gradient" id="Gradient_ybjr3"]
 offsets = PackedFloat32Array(0.367133, 0.777389, 0.851981, 1)
@@ -35,7 +35,7 @@ offset_right = 13.0
 offset_bottom = 9.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("1_dcfb8")
+theme_override_fonts/font = ExtResource("2_ffwg7")
 theme_override_font_sizes/font_size = 32
 text = "0"
 horizontal_alignment = 1
@@ -47,7 +47,7 @@ offset_right = 24.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("1_dcfb8")
+theme_override_fonts/font = ExtResource("2_ffwg7")
 theme_override_font_sizes/font_size = 16
 text = "wait: 0s"
 horizontal_alignment = 1

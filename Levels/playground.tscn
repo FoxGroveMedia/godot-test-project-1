@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://b6s6vl3tlqi8i"]
+[gd_scene load_steps=16 format=4 uid="uid://b6s6vl3tlqi8i"]
 
 [ext_resource type="Script" path="res://levels/scripts/level.gd" id="1_y28d5"]
 [ext_resource type="PackedScene" path="res://tilemaps/grass_01.tscn" id="2_vjdl2"]
@@ -11,9 +11,10 @@
 [ext_resource type="PackedScene" path="res://npc/npc_behavior_wander.tscn" id="8_seavy"]
 [ext_resource type="PackedScene" uid="uid://y510ndh610n2" path="res://interactables/dialog/dialog_interaction.tscn" id="9_o10kr"]
 [ext_resource type="PackedScene" path="res://npc/npc_behavior_patrol.tscn" id="10_vbvn6"]
-[ext_resource type="PackedScene" path="res://npc/patrol_location.tscn" id="11_p8nwm"]
+[ext_resource type="PackedScene" uid="uid://cj2g7ly7csfox" path="res://npc/patrol_location.tscn" id="11_p8nwm"]
 [ext_resource type="Script" path="res://interactables/dialog/scripts/dialog_text.gd" id="11_wteht"]
 [ext_resource type="Resource" uid="uid://cklhpuyf14mbo" path="res://npc/npcs/00_hero.tres" id="12_bygin"]
+[ext_resource type="Resource" uid="uid://ctghjlhxnqj38" path="res://npc/npcs/npc_02.tres" id="13_hc165"]
 
 [node name="Playground" type="Node2D"]
 y_sort_enabled = true
@@ -92,32 +93,33 @@ item_data = ExtResource("6_7vrla")
 position = Vector2(460, -132)
 item_data = ExtResource("6_7vrla")
 
-[node name="NPC" parent="." instance=ExtResource("7_w05wm")]
+[node name="NPC1" parent="." instance=ExtResource("7_w05wm")]
 position = Vector2(145, 154)
 npc_resource = ExtResource("8_7vhh2")
 
-[node name="NpcWanderBehavior" parent="NPC" instance=ExtResource("8_seavy")]
+[node name="NpcWanderBehavior" parent="NPC1" instance=ExtResource("8_seavy")]
 idle_duration = 4.0
 
-[node name="DialogInteraction" parent="NPC" instance=ExtResource("9_o10kr")]
+[node name="DialogInteraction" parent="NPC1" instance=ExtResource("9_o10kr")]
 enabled = true
 
-[node name="DialogText" type="Node" parent="NPC/DialogInteraction"]
+[node name="DialogText" type="Node" parent="NPC1/DialogInteraction"]
 script = ExtResource("11_wteht")
 text = "Hi, [b]Hero[/b] is that you?"
 
-[node name="DialogText2" type="Node" parent="NPC/DialogInteraction"]
+[node name="DialogText2" type="Node" parent="NPC1/DialogInteraction"]
 script = ExtResource("11_wteht")
 text = "Heck yeah it's me!"
 npc_info = ExtResource("12_bygin")
 
-[node name="DialogText3" type="Node" parent="NPC/DialogInteraction"]
+[node name="DialogText3" type="Node" parent="NPC1/DialogInteraction"]
 script = ExtResource("11_wteht")
 text = "Nice bro!
 Happy to have a hero!"
 
 [node name="NPC2" parent="." instance=ExtResource("7_w05wm")]
 position = Vector2(366, 156)
+npc_resource = ExtResource("13_hc165")
 
 [node name="NpcPatrolBehavior" parent="NPC2" instance=ExtResource("10_vbvn6")]
 
@@ -139,3 +141,10 @@ wait_time = 2.0
 modulate = Color(0, 1, 1, 1)
 position = Vector2(4, 105)
 wait_time = 2.0
+
+[node name="DialogInteraction" parent="NPC2" instance=ExtResource("9_o10kr")]
+enabled = true
+
+[node name="DialogText" type="Node" parent="NPC2/DialogInteraction"]
+script = ExtResource("11_wteht")
+text = "Hi! How's Hero?"
