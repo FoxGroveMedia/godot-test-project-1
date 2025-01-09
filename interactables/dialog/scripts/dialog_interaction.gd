@@ -7,7 +7,7 @@ signal finished
 
 @export var enabled : bool = true
 
-var dialot_items : Array[ DialogItem ]
+var dialog_items : Array[ DialogItem ]
 
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
@@ -21,20 +21,20 @@ func _ready() -> void:
 	
 	for c in get_children():
 		if c is DialogItem:
-			dialot_items.append( c )
+			dialog_items.append( c )
 
 
 func player_interact() -> void:
 	player_interacted.emit()
 	await get_tree().process_frame
 	await get_tree().process_frame
-	DialogSystem.show_dialog( dialot_items )
+	DialogSystem.show_dialog( dialog_items )
 	DialogSystem.finished.connect( _on_dialog_finished )
 	pass
 
 
 func _on_area_enter( _a : Area2D ) -> void:
-	if enabled == false or dialot_items.size() == 0:
+	if enabled == false or dialog_items.size() == 0:
 		return
 	animation.play("show")
 	PlayerManager.interact_pressed.connect( player_interact )

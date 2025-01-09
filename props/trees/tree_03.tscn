@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://5nb0bwqonmb8"]
+
+[ext_resource type="Texture2D" uid="uid://cndds23xk4pkh" path="res://tilemaps/sprites/trees.png" id="1_fup8k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gglvo"]
+radius = 6.0
+height = 20.0
+
+[node name="Tree02" type="Node2D"]
+
+[node name="Trunk" type="Sprite2D" parent="."]
+position = Vector2(0, -19)
+texture = ExtResource("1_fup8k")
+region_enabled = true
+region_rect = Rect2(107, 91, 59, 71)
+
+[node name="Leaves" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, -88)
+texture = ExtResource("1_fup8k")
+region_enabled = true
+region_rect = Rect2(94, 0, 85, 91)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+position = Vector2(0, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gglvo")

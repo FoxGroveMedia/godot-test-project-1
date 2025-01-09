@@ -62,6 +62,7 @@ func gather_patrol_locations( _n : Node = null ) -> void:
 	pass
 
 
+# Start
 func start() -> void:
 	if npc.do_behavior == false or patrol_locations.size() < 2:
 		return
@@ -76,8 +77,8 @@ func start() -> void:
 	pass
 
 
+# Idle Phase
 func idle_phase() -> void:
-	# IDLE PHASE
 	npc.global_position = target.target_position
 	npc.state = "idle"
 	npc.velocity = Vector2.ZERO
@@ -102,6 +103,7 @@ func idle_phase() -> void:
 	pass
 
 
+# Walk Phase
 func walk_phase() -> void:
 	npc.state = "walk"
 	direction = global_position.direction_to( target.target_position )

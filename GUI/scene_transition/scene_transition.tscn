@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://gui/scene_transition/scene_transition.gd" id="1_o1c0i"]
 
-[sub_resource type="Animation" id="Animation_yo515"]
-resource_name = "default"
+[sub_resource type="Animation" id="Animation_okimd"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -17,8 +17,8 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_okimd"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_yo515"]
+resource_name = "default"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

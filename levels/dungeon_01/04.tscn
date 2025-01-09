@@ -15,7 +15,7 @@ tile_map_data = PackedByteArray("AAD8/wEAAQAKAAAAAAD7/wIAAQAJAAEAAAD8/wIAAQAKAAE
 
 [node name="LevelTransitionGoTo02From04" parent="." instance=ExtResource("3_3ei8d")]
 position = Vector2(96, 336)
-level = "res://Levels/Dungeon01/02.tscn"
+level = "res://levels/dungeon_01/02.tscn"
 target_transition_area = "LevelTransitionGoTo04"
 auto_save_on_enter = false
 side = 3

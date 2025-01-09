@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://br1nkygxftj1o" path="res://levels/level_transition.tscn" id="6_jk4t1"]
 [ext_resource type="PackedScene" uid="uid://m5vrteyvh1jj" path="res://props/rocks/rock_01.tscn" id="7_5chmu"]
 [ext_resource type="AudioStream" uid="uid://bbkl22iqrbx6o" path="res://music/to_adventure.mp3" id="8_gagia"]
-[ext_resource type="PackedScene" uid="uid://che2yv72dk2or" path="res://enemies/slime/slime.tscn" id="9_ogshv"]
+[ext_resource type="PackedScene" uid="uid://che2yv72dk2or" path="res://enemies/slime/Slime.tscn" id="9_ogshv"]
 [ext_resource type="PackedScene" uid="uid://hs4k6icqn77d" path="res://items/item_pickup/item_pickup.tscn" id="10_8vym6"]
 [ext_resource type="Resource" uid="uid://c77b3cbtmkntk" path="res://items/potion.tres" id="11_m6qkh"]
 
@@ -72,13 +72,13 @@ position = Vector2(394, 230)
 
 [node name="LevelTransition" parent="." instance=ExtResource("6_jk4t1")]
 position = Vector2(-32, 112)
-level = "res://Levels/Area01/01.tscn"
+level = "res://levels/area_01/01.tscn"
 target_transition_area = "LevelTransition2"
 size = 1
 
 [node name="LevelTransitionEnterDungeon" parent="." instance=ExtResource("6_jk4t1")]
 position = Vector2(240, -33)
-level = "res://Levels/Dungeon01/01.tscn"
+level = "res://levels/dungeon_01/01.tscn"
 target_transition_area = "LevelTransitionExitDungeon"
 center_player = true
 side = 2

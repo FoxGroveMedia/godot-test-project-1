@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=4 uid="uid://b60srmx8goknw"]
+
+[ext_resource type="Texture2D" uid="uid://flm7eg7uspjp" path="res://gui/loading_screen/loading_screen_background.jpg" id="1_gcwsf"]
+[ext_resource type="Script" path="res://title_scene/title_scene.gd" id="1_ko8qr"]
+[ext_resource type="AudioStream" uid="uid://bp1tq3b2mseby" path="res://title_scene/audio/waves.mp3" id="2_7aujo"]
+[ext_resource type="PackedScene" uid="uid://cxu2adw6gyflv" path="res://tilemaps/grass_01.tscn" id="2_60okm"]
+[ext_resource type="FontFile" uid="uid://4j1ihqec6d8c" path="res://gui/fonts/venice_classic.ttf" id="2_f71b8"]
+[ext_resource type="Theme" uid="uid://b15gkqqpnejrm" path="res://gui/themes/dialog_choice_theme.tres" id="3_oird3"]
+[ext_resource type="AudioStream" uid="uid://citqq2ymdt7nk" path="res://title_scene/audio/menu_focus.wav" id="3_rfdk4"]
+[ext_resource type="AudioStream" uid="uid://dgkjyrqnmemet" path="res://title_scene/audio/menu_select.wav" id="4_v2rgl"]
+[ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://levels/player_spawn.tscn" id="5_qqq0v"]
+
+[node name="TitleScene" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_ko8qr")
+music = ExtResource("2_7aujo")
+button_focus_audio = ExtResource("3_rfdk4")
+button_press_audio = ExtResource("4_v2rgl")
+
+[node name="Ground" parent="." instance=ExtResource("2_60okm")]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAANAAUAAAAAAAAAAAANAAYAAAAAAAAAAAANAAcAAAAAAAAAAAAOAAEAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAgAAAAAAAAAAAACAAgAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAA=")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+z_index = 50
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/Control"]
+clip_contents = true
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_gcwsf")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Overlay" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.707)
+
+[node name="Main Menu" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -42.0
+offset_right = 46.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_f71b8")
+theme_override_font_sizes/font_size = 19
+text = "Main Menu"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 122.0
+offset_right = 288.0
+offset_bottom = 178.0
+
+[node name="NewGame" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_oird3")
+text = "New Game"
+
+[node name="Continue" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_oird3")
+text = "Continue"
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("5_qqq0v")]
+position = Vector2(379, 130)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+max_polyphony = 4

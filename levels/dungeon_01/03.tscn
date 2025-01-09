@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://br1nkygxftj1o" path="res://levels/level_transition.tscn" id="3_fg2ke"]
 [ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://levels/player_spawn.tscn" id="5_i7e4f"]
 [ext_resource type="PackedScene" uid="uid://3pji7bay7dn1" path="res://general_nodes/enemy_counter/enemy_counter.tscn" id="6_entpr"]
-[ext_resource type="PackedScene" uid="uid://che2yv72dk2or" path="res://enemies/slime/slime.tscn" id="7_p1p06"]
+[ext_resource type="PackedScene" uid="uid://che2yv72dk2or" path="res://enemies/slime/Slime.tscn" id="7_p1p06"]
 [ext_resource type="PackedScene" uid="uid://d1oswx777ek5y" path="res://general_nodes/item_dropper/item_dropper.tscn" id="8_3ot07"]
 [ext_resource type="Resource" uid="uid://dyx6afhv6d003" path="res://items/key_dungeon.tres" id="9_emgju"]
 
@@ -19,7 +19,7 @@ tile_map_data = PackedByteArray("AAD9////AQALAAAAAAD7/wAAAQAJAAEAAAD8/wAAAQAKAAE
 
 [node name="LevelTransition" parent="." instance=ExtResource("3_fg2ke")]
 position = Vector2(-144, 192)
-level = "res://Levels/Dungeon01/02.tscn"
+level = "res://levels/dungeon_01/02.tscn"
 target_transition_area = "LevelTransition3"
 auto_save_on_enter = false
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://drk8yty8kp0tu"]
+[gd_scene load_steps=17 format=3 uid="uid://drk8yty8kp0tu"]
 
 [ext_resource type="Script" path="res://gui/dialog_system/scripts/dialog_system.gd" id="1_jjypc"]
 [ext_resource type="Texture2D" uid="uid://jqnfov3w48on" path="res://gui/dialog_system/sprites/text_bubble.png" id="2_4f8he"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://5sourf2eib3l" path="res://gui/dialog_system/audio/voice_blip.wav" id="6_bk1ml"]
 [ext_resource type="Script" path="res://gui/dialog_system/scripts/dialog_portrait.gd" id="6_gaj1x"]
 [ext_resource type="FontFile" uid="uid://hauaebcjpw43" path="res://gui/fonts/tiny_unicode.ttf" id="6_p7xuk"]
+[ext_resource type="Theme" uid="uid://b15gkqqpnejrm" path="res://gui/themes/dialog_choice_theme.tres" id="9_o0laj"]
 
 [sub_resource type="Gradient" id="Gradient_fl5gq"]
 offsets = PackedFloat32Array(0.258993, 1)
@@ -79,7 +80,7 @@ _data = {
 
 [node name="DialogSystem" type="CanvasLayer"]
 process_mode = 3
-layer = 0
+layer = 2
 script = ExtResource("1_jjypc")
 
 [node name="DialogUI" type="Control" parent="."]
@@ -179,3 +180,31 @@ libraries = {
 "": SubResource("AnimationLibrary_g0mqn")
 }
 autoplay = "default"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -101.0
+offset_right = 196.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_o0laj")
+alignment = 1
+
+[node name="Button" type="Button" parent="DialogUI/VBoxContainer"]
+layout_mode = 2
+text = "Button"
+
+[node name="Button2" type="Button" parent="DialogUI/VBoxContainer"]
+layout_mode = 2
+text = "Button"
+
+[node name="Button3" type="Button" parent="DialogUI/VBoxContainer"]
+layout_mode = 2
+text = "Button"

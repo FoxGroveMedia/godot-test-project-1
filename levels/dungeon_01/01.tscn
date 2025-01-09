@@ -21,7 +21,7 @@ position = Vector2(192, 143)
 
 [node name="LevelTransitionExitDungeon" parent="." instance=ExtResource("4_ca37n")]
 position = Vector2(192, 175)
-level = "res://Levels/Area01/03.tscn"
+level = "res://levels/area_01/03.tscn"
 target_transition_area = "LevelTransitionEnterDungeon"
 center_player = true
 auto_save_on_enter = false
@@ -30,7 +30,7 @@ side = 3
 
 [node name="LevelTransitionGoTo02" parent="." instance=ExtResource("4_ca37n")]
 position = Vector2(192, 16)
-level = "res://Levels/Dungeon01/02.tscn"
+level = "res://levels/dungeon_01/02.tscn"
 target_transition_area = "LevelTransitionGoTo01"
 auto_save_on_enter = false
 size = 1

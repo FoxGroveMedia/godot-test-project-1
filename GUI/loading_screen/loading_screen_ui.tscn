@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://smllkcqmwf7e"]
 
-[ext_resource type="FontVariation" uid="uid://vv0o71hogfa" path="res://gui/fonts/venice_classic.tres" id="2_ausvq"]
+[ext_resource type="FontFile" uid="uid://bg4337h6rk0jx" path="res://gui/fonts/abaddon_light.ttf" id="2_liitb"]
 [ext_resource type="Texture2D" uid="uid://flm7eg7uspjp" path="res://gui/loading_screen/loading_screen_background.jpg" id="2_lsoj8"]
 
 [sub_resource type="Animation" id="Animation_bpfde"]
@@ -118,7 +118,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.707)
 
-[node name="PausedLabel" type="Label" parent="Control"]
+[node name="LoadingLabel" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -135,8 +135,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_constants/shadow_outline_size = 3
-theme_override_fonts/font = ExtResource("2_ausvq")
-theme_override_font_sizes/font_size = 38
+theme_override_fonts/font = ExtResource("2_liitb")
+theme_override_font_sizes/font_size = 32
 text = "Loading"
 horizontal_alignment = 1
 
@@ -157,8 +157,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_constants/shadow_outline_size = 3
-theme_override_fonts/font = ExtResource("2_ausvq")
-theme_override_font_sizes/font_size = 38
+theme_override_fonts/font = ExtResource("2_liitb")
+theme_override_font_sizes/font_size = 32
 text = "."
 horizontal_alignment = 1
 
@@ -179,8 +179,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_constants/shadow_outline_size = 3
-theme_override_fonts/font = ExtResource("2_ausvq")
-theme_override_font_sizes/font_size = 38
+theme_override_fonts/font = ExtResource("2_liitb")
+theme_override_font_sizes/font_size = 32
 text = "."
 horizontal_alignment = 1
 
@@ -201,8 +201,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_constants/shadow_outline_size = 3
-theme_override_fonts/font = ExtResource("2_ausvq")
-theme_override_font_sizes/font_size = 38
+theme_override_fonts/font = ExtResource("2_liitb")
+theme_override_font_sizes/font_size = 32
 text = "."
 horizontal_alignment = 1
 

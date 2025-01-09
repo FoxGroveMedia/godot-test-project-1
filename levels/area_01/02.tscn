@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cxu2adw6gyflv" path="res://tilemaps/grass_01.tscn" id="2_11qpw"]
 [ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://levels/player_spawn.tscn" id="3_bjft1"]
 [ext_resource type="PackedScene" uid="uid://b4xtqhrqnagrl" path="res://props/trees/tree_01.tscn" id="4_nhbuv"]
-[ext_resource type="PackedScene" uid="uid://c6gan7eqqocwh" path="res://enemies/goblin/goblin.tscn" id="7_5wpii"]
+[ext_resource type="PackedScene" uid="uid://c6gan7eqqocwh" path="res://enemies/goblin/Goblin.tscn" id="7_5wpii"]
 [ext_resource type="PackedScene" uid="uid://br1nkygxftj1o" path="res://levels/level_transition.tscn" id="7_qata3"]
 [ext_resource type="AudioStream" uid="uid://bmqonjx618bdy" path="res://music/celtic_atmosphere.mp3" id="8_ap6d1"]
 
@@ -38,7 +38,7 @@ position = Vector2(388, 233)
 
 [node name="LevelTransition" parent="." instance=ExtResource("7_qata3")]
 position = Vector2(240, -32)
-level = "res://Levels/Area01/01.tscn"
+level = "res://levels/area_01/01.tscn"
 side = 2
 
 [node name="Goblin" parent="." instance=ExtResource("7_5wpii")]
