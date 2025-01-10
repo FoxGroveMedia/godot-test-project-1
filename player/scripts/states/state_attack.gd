@@ -3,8 +3,10 @@ class_name State_Attack extends State
 @onready var animation_player : AnimationPlayer = $"../../AnimationPlayer"
 @onready var attack_anim : AnimationPlayer = $"../../Sprite2D/AttackEffectSprite/AnimationPlayer"
 @onready var audio : AudioStreamPlayer2D = $"../../Audio/AudioStreamPlayer2D"
+
 @onready var idle : State = $"../Idle"
 @onready var walk : State = $"../Walk"
+@onready var charge_attack: State = $"../ChargeAttack"
 @onready var hurt_box : HurtBox = %AttackHurtBox
 
 @export var attack_sound : AudioStream
@@ -65,4 +67,6 @@ func hanle_input( _event : InputEvent ) -> State:
 
 # Did it die?
 func _end_attack( _newAnimName : String ) -> void:
+	if Input.is_action_pressed("attack"):
+		state_machine.change_state( charge_attack )
 	attacking = false
