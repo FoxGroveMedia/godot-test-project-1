@@ -11,6 +11,10 @@ const DIR_4 : Array = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var state_machine : PlayerStateMachine = $StateMachine
 @onready var audio : AudioStreamPlayer2D = $Audio/AudioStreamPlayer2D
+@onready var lift : State_lift = $StateMachine/Lift
+@onready var held_item: Node2D = $Sprite2D/HeldItem
+@onready var carry: State_Carry = $StateMachine/Carry
+
 
 @export var hp : int = 6
 @export var max_hp : int = 6
@@ -105,4 +109,10 @@ func make_invulnerable( _duration : float = 1.0 ) -> void:
 	
 	invulnerable = false
 	hit_box.monitoring = true
+	pass
+
+
+func pickup_item( _t : Throwable ) -> void:
+	state_machine.change_state( lift )
+	carry.throwable = _t
 	pass

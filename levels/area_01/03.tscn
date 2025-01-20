@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://baxpbtpcr1isw"]
+[gd_scene load_steps=13 format=4 uid="uid://baxpbtpcr1isw"]
 
 [ext_resource type="Script" path="res://levels/scripts/level.gd" id="1_5kipn"]
 [ext_resource type="PackedScene" uid="uid://cxu2adw6gyflv" path="res://tilemaps/grass_01.tscn" id="2_7q5v7"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://che2yv72dk2or" path="res://enemies/slime/Slime.tscn" id="9_ogshv"]
 [ext_resource type="PackedScene" uid="uid://hs4k6icqn77d" path="res://items/item_pickup/item_pickup.tscn" id="10_8vym6"]
 [ext_resource type="Resource" uid="uid://c77b3cbtmkntk" path="res://items/potion.tres" id="11_m6qkh"]
+[ext_resource type="PackedScene" uid="uid://dfp0yypb3qloe" path="res://props/pot/pot.tscn" id="12_8qpk8"]
 
 [node name="03" type="Node2D"]
 script = ExtResource("1_5kipn")
@@ -111,3 +112,12 @@ position = Vector2(424, 160)
 [node name="ItemPickup" parent="." instance=ExtResource("10_8vym6")]
 position = Vector2(310, 113)
 item_data = ExtResource("11_m6qkh")
+
+[node name="Pot2" parent="." instance=ExtResource("12_8qpk8")]
+position = Vector2(206, 147)
+
+[node name="Pot3" parent="." instance=ExtResource("12_8qpk8")]
+position = Vector2(272, 147)
+
+[node name="Pot4" parent="." instance=ExtResource("12_8qpk8")]
+position = Vector2(242, 179)
