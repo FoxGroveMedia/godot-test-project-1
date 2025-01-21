@@ -12,8 +12,8 @@ radius = 15.0083
 radius = 3.0
 height = 20.0
 
-[sub_resource type="Animation" id="Animation_h8bjy"]
-resource_name = "default"
+[sub_resource type="Animation" id="Animation_m4h50"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,8 +39,8 @@ tracks/1/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_m4h50"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_h8bjy"]
+resource_name = "default"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
