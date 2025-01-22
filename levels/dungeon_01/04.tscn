@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://cm88j0g0evgaa"]
+[gd_scene load_steps=7 format=4 uid="uid://cm88j0g0evgaa"]
 
 [ext_resource type="Script" path="res://levels/scripts/level.gd" id="1_c8q7o"]
 [ext_resource type="PackedScene" uid="uid://dwd3h2y61mpam" path="res://tilemaps/dungeon_01.tscn" id="2_v0jdj"]
 [ext_resource type="PackedScene" uid="uid://br1nkygxftj1o" path="res://levels/level_transition.tscn" id="3_3ei8d"]
 [ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://levels/player_spawn.tscn" id="4_8c80w"]
 [ext_resource type="AudioStream" uid="uid://cf5jseuw85nm7" path="res://music/battle_of_the_dragons.mp3" id="5_le88w"]
+[ext_resource type="PackedScene" uid="uid://2wbst42x04vj" path="res://props/torches/torch_dungeon.tscn" id="6_46o11"]
 
 [node name="04" type="Node2D"]
 script = ExtResource("1_c8q7o")
@@ -22,3 +23,20 @@ side = 3
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("4_8c80w")]
 position = Vector2(96, 302)
+
+[node name="TorchDungeon" parent="." instance=ExtResource("6_46o11")]
+position = Vector2(-40, 143)
+
+[node name="TorchDungeon2" parent="." instance=ExtResource("6_46o11")]
+position = Vector2(234, 142)
+
+[node name="TorchDungeon3" parent="." instance=ExtResource("6_46o11")]
+position = Vector2(232, 303)
+
+[node name="TorchDungeon4" parent="." instance=ExtResource("6_46o11")]
+position = Vector2(-40, 303)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.335482, 0.416449, 0.366569, 1)
+energy = 0.8
+blend_mode = 2

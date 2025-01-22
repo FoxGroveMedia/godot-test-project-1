@@ -83,6 +83,7 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 	if invulnerable == true:
 		return
 	current_health -= hurt_box.damage
+	PlayerManager.shake_camera()
 	health_bar.value = current_health
 	if current_health > 0:
 		enemy_damaged.emit( hurt_box )

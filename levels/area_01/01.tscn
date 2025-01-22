@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=4 uid="uid://8jclxntxgikk"]
+[gd_scene load_steps=16 format=4 uid="uid://8jclxntxgikk"]
 
 [ext_resource type="PackedScene" uid="uid://cxu2adw6gyflv" path="res://tilemaps/grass_01.tscn" id="1_dk5ds"]
 [ext_resource type="Script" path="res://levels/scripts/level.gd" id="1_m76ha"]
 [ext_resource type="PackedScene" uid="uid://byo1als32502q" path="res://levels/player_spawn.tscn" id="2_k427f"]
-[ext_resource type="PackedScene" uid="uid://b4xtqhrqnagrl" path="res://props/trees/tree_01.tscn" id="4_u47wg"]
 [ext_resource type="PackedScene" uid="uid://dulplqqlpy5mr" path="res://props/plants/plant_01.tscn" id="6_s061j"]
 [ext_resource type="PackedScene" uid="uid://br1nkygxftj1o" path="res://levels/level_transition.tscn" id="7_b1evi"]
 [ext_resource type="AudioStream" uid="uid://bmqonjx618bdy" path="res://music/celtic_atmosphere.mp3" id="8_dfimf"]
@@ -44,19 +43,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAABAAEAAAACAAAAAAABAAI
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("2_k427f")]
 position = Vector2(179, 214)
-
-[node name="Tree01" parent="." instance=ExtResource("4_u47wg")]
-position = Vector2(33, 234)
-
-[node name="Tree06" parent="." instance=ExtResource("4_u47wg")]
-position = Vector2(394, 194)
-scale = Vector2(0.7, 0.7)
-
-[node name="Tree03" parent="." instance=ExtResource("4_u47wg")]
-position = Vector2(191, 20)
-
-[node name="Tree04" parent="." instance=ExtResource("4_u47wg")]
-position = Vector2(436, 28)
 
 [node name="Plant4" parent="." instance=ExtResource("6_s061j")]
 position = Vector2(273, 30)
