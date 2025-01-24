@@ -8,7 +8,7 @@ signal game_saved
 
 # Current save dictionary.
 var current_save : Dictionary = {
-	gunter = "Congratulations! You've found the treasure! Don't mess with this code, or you might wind up in the Middle Ages, choose wisely!",
+	gunter = "Congratulations! You've found the treasure! Don't mess with this code, or you might wind up in the Middle Ages, choose wisely Wizard!",
 	scene_path = "",
 	player = {
 		hp = 1,
@@ -20,11 +20,6 @@ var current_save : Dictionary = {
 	persistence = [],
 	quests = []
 }
-
-
-# Lets start this party!
-#func _ready() -> void:
-	#pass
 
 
 # Save the game.
@@ -47,7 +42,7 @@ func get_save_file() -> FileAccess:
 # Load the saved game.
 func load_game() -> void:
 	if FileAccess.file_exists( SAVE_PATH ):
-		print("Loading game...")
+		print("Loading Game...")
 		var file := get_save_file()
 		var json := JSON.new()
 		json.parse( file.get_line() )

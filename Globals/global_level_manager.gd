@@ -35,7 +35,7 @@ func load_new_level(
 		level_path : String,
 		_target_transition : String,
 		_position_offset : Vector2,
-		auto_save : bool = false
+		auto_save : bool = false,
 ) -> void:
 	
 	get_tree().paused = true
@@ -50,6 +50,8 @@ func load_new_level(
 	
 	get_tree().change_scene_to_file( level_path )
 	
+	await get_tree().process_frame
+	
 	await SceneTransition.fade_in()
 	
 	if auto_save == true:
@@ -58,7 +60,7 @@ func load_new_level(
 	get_tree().paused = false
 	
 	await get_tree().process_frame
-	#await get_tree().process_frame
+	await get_tree().process_frame
 	
 	level_loaded.emit()
 	

@@ -35,7 +35,7 @@ auto_save_on_enter = false
 side = 1
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("5_i7e4f")]
-position = Vector2(96, 256)
+position = Vector2(96, 192)
 
 [node name="LockedDoor" parent="." instance=ExtResource("6_y8vom")]
 process_mode = 3

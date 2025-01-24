@@ -24,7 +24,7 @@ target_transition_area = "LevelTransition3"
 auto_save_on_enter = false
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("5_i7e4f")]
-position = Vector2(96, 302)
+position = Vector2(-81, 192)
 
 [node name="EnemyCounter" parent="." instance=ExtResource("6_entpr")]
 
