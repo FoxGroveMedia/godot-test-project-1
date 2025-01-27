@@ -2,11 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://7dsi5fppaduy" path="res://npc/sprites/portraits/hero_portrait.png" id="1_7dxfh"]
 [ext_resource type="Script" path="res://npc/scripts/npc_resource.gd" id="2_kbnn7"]
-[ext_resource type="Texture2D" uid="uid://d11uj12ornqj0" path="res://player/sprites/player_sprite_02.png" id="3_rfeu7"]
+
+[sub_resource type="Resource" id="Resource_jtndq"]
+metadata/__load_path__ = "res://player/sprites/player_sprite_02.png"
 
 [resource]
 script = ExtResource("2_kbnn7")
 npc_name = "Hero"
-sprite = ExtResource("3_rfeu7")
+sprite = SubResource("Resource_jtndq")
 portrait = ExtResource("1_7dxfh")
 dialog_audio_pitch = 0.98
