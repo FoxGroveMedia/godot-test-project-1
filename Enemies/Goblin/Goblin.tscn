@@ -850,14 +850,14 @@ collision_mask = 2
 script = ExtResource("2_1qlvd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(1, -8)
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_3apuf")
 debug_color = Color(1, 0.792157, 0, 0.647059)
 
 [node name="HitBox" parent="." instance=ExtResource("3_rjogl")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(1, -8)
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_3apuf")
 debug_color = Color(1, 0.792157, 0, 0.647059)
 
@@ -882,7 +882,7 @@ script = ExtResource("2_1qlvd")
 damage = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
-position = Vector2(1, -8)
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_3apuf")
 debug_color = Color(1, 0.792157, 0, 0.647059)
 
@@ -919,10 +919,10 @@ drops = Array[ExtResource("13_jo473")]([SubResource("Resource_fan8u"), SubResour
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("vision_area", "attack_area", "next_state")]
 script = ExtResource("17_2iwrx")
-chase_speed = 50.0
+turn_rate = 0.5
 vision_area = NodePath("../../VisionArea")
 attack_area = NodePath("../../Sprite2D/AttackHurtBox")
-state_aggro_duration = 1.0
+state_aggro_duration = 5.0
 next_state = NodePath("../Idle")
 
 [node name="HealthBar" type="ProgressBar" parent="."]

@@ -1,5 +1,7 @@
 class_name LevelTitlemap extends TileMapLayer
 
+@export var title_size : float = 32
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,9 +12,9 @@ func _ready():
 func get_titlemap_bounds() -> Array[ Vector2 ]:
 	var bounds : Array[ Vector2 ] = []
 	bounds.append(
-		Vector2( get_used_rect().position * rendering_quadrant_size )
+		Vector2( get_used_rect().position * title_size ) + position
 	)
 	bounds.append(
-		Vector2( get_used_rect().end * rendering_quadrant_size )
+		Vector2( get_used_rect().end * title_size ) + position
 	)
 	return bounds

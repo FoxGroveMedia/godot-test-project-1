@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://bsynrs4mvnvbq"]
+[gd_scene load_steps=9 format=4 uid="uid://bsynrs4mvnvbq"]
 
 [ext_resource type="Script" path="res://levels/scripts/level.gd" id="1_acovt"]
 [ext_resource type="PackedScene" uid="uid://cxu2adw6gyflv" path="res://tilemaps/grass_01.tscn" id="2_11qpw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b4xtqhrqnagrl" path="res://props/trees/tree_01.tscn" id="4_nhbuv"]
 [ext_resource type="PackedScene" uid="uid://c6gan7eqqocwh" path="res://enemies/goblin/Goblin.tscn" id="7_5wpii"]
 [ext_resource type="PackedScene" uid="uid://br1nkygxftj1o" path="res://levels/level_transition.tscn" id="7_qata3"]
+[ext_resource type="PackedScene" uid="uid://nh08ehongn3y" path="res://props/barrels/barrel.tscn" id="8_1kral"]
 [ext_resource type="AudioStream" uid="uid://bmqonjx618bdy" path="res://music/celtic_atmosphere.mp3" id="8_ap6d1"]
 
 [node name="02" type="Node2D"]
@@ -43,3 +44,12 @@ side = 2
 
 [node name="Goblin" parent="." instance=ExtResource("7_5wpii")]
 position = Vector2(240, 156)
+
+[node name="Barrel" parent="." instance=ExtResource("8_1kral")]
+position = Vector2(241, 96)
+
+[node name="Barrel2" parent="." instance=ExtResource("8_1kral")]
+position = Vector2(166, 130)
+
+[node name="Barrel3" parent="." instance=ExtResource("8_1kral")]
+position = Vector2(314, 133)
